@@ -1,4 +1,4 @@
-# Akka-with-Crawler
+# AKKA-with-Crawler
 
 ### Description
 This is a sample about how to let framework AKKA integrate with Crawler. <br>
