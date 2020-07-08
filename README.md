@@ -12,11 +12,7 @@ Study for framework AKKA and integrate it with crawler to implement a sample. <b
 This project classifies program to 2 parts. One is crawler, another one is other prcesses logic-implements (like Multiple Actors relationship, Send message mechanism and build Kafka producer, consumer, etc). <br>
 
 #### Environment
-##### For Developing
 OS: MacOS (Current Version: 10.14.5)
-
-#### For Running
-OS: MacOS (Current Version: 10.14.5), Windows OS (Current Version: Win10)
 
 #### Crawler
 Language: Python <br>
