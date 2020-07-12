@@ -48,3 +48,16 @@ Receive task and essentailly work the content. <br>
 
 By the way, developers could customize methods be needed in every actors. 
 
+
+### Code Description
+
+* Build AKKA Actor System
+
+
+* Build AKKA Actor 
+
+
+* Send Message
+
+
+
