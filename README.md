@@ -72,7 +72,7 @@ First of all, it creates a master actor which is the top of the tree after build
 val king = system.actorOf(Props[CrawlerKing], "Master-Actor")
 ```
 
-> Here like build a mailbox and other actor will send message to it. <br>
+> Here like build a mailbox and other actor could send message to it. <br>
 
 However, it should announce the AKKA actor object before create it. <br>
 For example, it could do that like below: <br>
@@ -91,7 +91,7 @@ class CrawlerKing extends Actor{
 }
 ```
 
-Method *receive* is a abstract method in trait *Actor* and it should be overrided. It decides that what message it will receive. <br>
+Method **receive** is a abstract method in trait *A*ctor** and it should be overrided. It decides that what message it will receive. <br>
 
 > Here like define what mail it accepts. <br>
 
@@ -99,7 +99,7 @@ Let's send message to it. <br>
 
 Send Message
 ---
-For AKKA, the send message is very easy and simple. Just use *!*.
+For AKKA, the send message is very easy and simple. Just use **!**.
 
 ```scala
 king ! TestMsg
