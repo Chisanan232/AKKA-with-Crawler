@@ -52,7 +52,48 @@ By the way, developers could customize methods be needed in every actors.
 ### Code Description
 
 * Build AKKA Actor System
+It's necessary to create a system and build AKKA actors tree in it. <br>
 
+```scala
+import akka.actor.{ActorSystem, Props}
+
+val system = ActorSystem(AkkaConfig.SystemName)
+```
+
+First of all, it creates a master actor which is the top of tree after builds a system, in other words, all actors be created later are its children. <br>
+
+```scala
+val king = system.actorOf(Props[CrawlerKing], "Master-Actor")
+```
+
+'''Here like build a mailbox and other actor will send message to it. <br>
+
+However, it should announce the AKKA actor object before create it. <br>
+For example, it could do that like below: <br>
+
+```scala
+// Define message and announce content
+trait Msg {content: String}
+case class TestMsg (content: String) extends Msg
+
+// Define a AKKA actor
+class CrawlerKing extends Actor{
+    override def receive: Receive = {
+        case TestMsg =>
+            println("I got the message!")
+    }
+}
+```
+
+Method *receive* is a abstract method in trait *Actor* and it should be overrided. It decides that what message it will receive. <br>
+
+'''Here like define what mail will be accepted. <br>
+
+Let's send message to it. <br>
+
+```scala
+king ! TestMsg
+```
 
 * Build AKKA Actor 
 
